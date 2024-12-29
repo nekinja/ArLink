@@ -15,14 +15,14 @@ Output Directory: dist  # or build
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Web Sederhana</h1>
+        <h1>join wait list now</h1>
     </header>
     <main>
-        <p>Ini adalah contoh web sederhana dengan HTML, CSS, dan JavaScript.</p>
+        <p>the next AIdata project on AO</p>
         <button id="alertButton">Klik Saya!</button>
     </main>
     <footer>
-        <p>&copy; 2024 Web Sederhana</p>
+        <p>&copy; 2024 Airlinkprohect</p>
     </footer>
     <script src="script.js"></script>
 </body>
