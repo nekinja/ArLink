@@ -4,72 +4,71 @@ Project Name: my-first-app
 Branch: main
 Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
-Output Directory: dist  # or build
+/project
+  ├── index.html
+  ├── style.css
+  ├── script.js
+  └── assets/
+       ├── images/
+       └── icons/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contoh Web Sederhana</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>join wait list now</h1>
-    </header>
-    <main>
-        <p>the next AIdata project on AO</p>
-        <button id="alertButton">Klik Saya!</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 Airlinkprohect</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <nav>
+      <div class="logo">PremiumSite</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to PremiumSite</h1>
+      <p>We deliver the best solutions for your business needs.</p>
+      <a href="#services" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>High-quality websites with modern design and functionality.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Apps</h3>
+        <p>Custom mobile applications tailored to your needs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO Optimization</h3>
+        <p>Boost your website's visibility with our SEO expertise.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 PremiumSite. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-}
 
-main {
-    padding: 2em;
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #007BFF;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-document.getElementById('alertButton').addEventListener('click', function() {
-    alert('Tombol telah diklik!');
-});
 
