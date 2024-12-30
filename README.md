@@ -3,150 +3,112 @@ Branch: main
 Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
 Output Directory: dist  # or build
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AO NFT Marketplace</title>
+    <title>Crypto Analyst Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #121212;
+            color: #ffffff;
         }
+
         header {
-            background-color: #1e1e2f;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        header nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        header nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background-color: #3b3b4f;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-        }
-        .marketplace {
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .nft-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-        .nft-card:hover {
-            transform: scale(1.05);
-        }
-        .nft-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .nft-card .details {
+            background-color: #1e88e5;
             padding: 1rem;
+            text-align: center;
         }
-        .nft-card .details h3 {
+
+        header h1 {
             margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .crypto-card {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .crypto-card h2 {
+            margin: 0 0 0.5rem;
+        }
+
+        .crypto-card .price {
+            font-size: 1.5rem;
+            color: #4caf50;
+        }
+
+        .crypto-card .change {
             font-size: 1.2rem;
         }
-        .nft-card .details p {
-            margin: 0.5rem 0;
-            color: #666;
-        }
-        .nft-card .details button {
-            background-color: #1e1e2f;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .nft-card .details button:hover {
-            background-color: #333;
-        }
+
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #1e1e2f;
-            color: white;
+            background-color: #1e88e5;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">AO NFT Marketplace</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Marketplace</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+        <h1>Crypto Analyst Dashboard</h1>
     </header>
 
-    <section class="hero">
-        <h1>Welcome to AO NFT Marketplace</h1>
-        <p>Discover, collect, and sell extraordinary NFTs.</p>
-    </section>
+    <main>
+        <div id="crypto-container">
+            <div class="crypto-card">
+                <h2>Bitcoin (BTC)</h2>
+                <p class="price" id="btc-price">$0.00</p>
+                <p class="change" id="btc-change">Change: 0%</p>
+            </div>
 
-    <section class="marketplace">
-        <div class="nft-card">
-            <img src="https://via.placeholder.com/300" alt="NFT">
-            <div class="details">
-                <h3>NFT Title</h3>
-                <p>Price: 0.5 ETH</p>
-                <button>Buy Now</button>
+            <div class="crypto-card">
+                <h2>Ethereum (ETH)</h2>
+                <p class="price" id="eth-price">$0.00</p>
+                <p class="change" id="eth-change">Change: 0%</p>
             </div>
         </div>
-        <div class="nft-card">
-            <img src="https://via.placeholder.com/300" alt="NFT">
-            <div class="details">
-                <h3>NFT Title</h3>
-                <p>Price: 1.2 ETH</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
-        <div class="nft-card">
-            <img src="https://via.placeholder.com/300" alt="NFT">
-            <div class="details">
-                <h3>NFT Title</h3>
-                <p>Price: 2.0 ETH</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer>
-        &copy; 2024 AO NFT Marketplace. All rights reserved.
+        <p>Crypto Analyst &copy; 2024</p>
     </footer>
+
+    <script>
+        async function fetchCryptoData() {
+            const apiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true";
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                document.getElementById('btc-price').textContent = `$${data.bitcoin.usd}`;
+                document.getElementById('btc-change').textContent = `Change: ${data.bitcoin.usd_24h_change.toFixed(2)}%`;
+
+                document.getElementById('eth-price').textContent = `$${data.ethereum.usd}`;
+                document.getElementById('eth-change').textContent = `Change: ${data.ethereum.usd_24h_change.toFixed(2)}%`;
+            } catch (error) {
+                console.error("Error fetching crypto data:", error);
+            }
+        }
+
+        // Fetch data on page load and refresh every 60 seconds
+        fetchCryptoData();
+        setInterval(fetchCryptoData, 60000);
+    </script>
 </body>
 </html>
