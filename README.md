@@ -3,72 +3,150 @@ Branch: main
 Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
 Output Directory: dist  # or build
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptocurrency Tutorial for Beginners</title>
+    <title>AO NFT Marketplace</title>
     <style>
-    <img src="https://github.com/nekinja/ArLink/blob/main/c1.jpg?raw=true" alt="currency" />
-
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #3b3b4f;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .marketplace {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .nft-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .nft-card:hover {
+            transform: scale(1.05);
+        }
+        .nft-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .nft-card .details {
+            padding: 1rem;
+        }
+        .nft-card .details h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .nft-card .details p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+        .nft-card .details button {
+            background-color: #1e1e2f;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .nft-card .details button:hover {
+            background-color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1e1e2f;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Cryptocurrency Basics</h1>
-        <p>Learn the essentials of cryptocurrency and blockchain technology.</p>
+        <div class="logo">AO NFT Marketplace</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Marketplace</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#what-is-crypto">What is Cryptocurrency?</a>
-        <a href="#how-to-start">How to Start</a>
-        <a href="#pros-and-cons">Pros and Cons</a>
-        <a href="#faq">FAQ</a>
-    </nav>
-    <section id="what-is-crypto">
-        <h2>What is Cryptocurrency?</h2>
-        <p>Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central authority like a bank. Popular cryptocurrencies include Bitcoin, Ethereum, and Litecoin.</p>
-        <div class="highlight">
-            <strong>Key Feature:</strong> Decentralization, transparency, and immutability are core aspects of blockchain technology.
+
+    <section class="hero">
+        <h1>Welcome to AO NFT Marketplace</h1>
+        <p>Discover, collect, and sell extraordinary NFTs.</p>
+    </section>
+
+    <section class="marketplace">
+        <div class="nft-card">
+            <img src="https://via.placeholder.com/300" alt="NFT">
+            <div class="details">
+                <h3>NFT Title</h3>
+                <p>Price: 0.5 ETH</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <div class="nft-card">
+            <img src="https://via.placeholder.com/300" alt="NFT">
+            <div class="details">
+                <h3>NFT Title</h3>
+                <p>Price: 1.2 ETH</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <div class="nft-card">
+            <img src="https://via.placeholder.com/300" alt="NFT">
+            <div class="details">
+                <h3>NFT Title</h3>
+                <p>Price: 2.0 ETH</p>
+                <button>Buy Now</button>
+            </div>
         </div>
     </section>
-    <section id="how-to-start">
-        <h2>How to Start with Cryptocurrency</h2>
-        <ol>
-            <li><strong>Learn the Basics:</strong> Understand what cryptocurrency is and how it works.</li>
-            <li><strong>Choose a Wallet:</strong> Set up a secure digital wallet to store your cryptocurrency.</li>
-            <li><strong>Pick an Exchange:</strong> Register on a cryptocurrency exchange like Binance or Coinbase to buy and sell cryptocurrencies.</li>
-            <li><strong>Start Small:</strong> Invest a small amount to get familiar with the process.</li>
-        </ol>
-        <div class="highlight">
-            <strong>Tip:</strong> Always enable two-factor authentication on your accounts for added security.
-        </div>
-    </section>
-    <section id="pros-and-cons">
-        <h2>Pros and Cons of Cryptocurrency</h2>
-        <h3>Pros:</h3>
-        <ul>
-            <li>Decentralized and transparent.</li>
-            <li>Fast and secure transactions.</li>
-            <li>Potential for high returns on investment.</li>
-        </ul>
-        <h3>Cons:</h3>
-        <ul>
-            <li>Highly volatile market.</li>
-            <li>Risk of fraud and hacking.</li>
-            <li>Complexity for beginners.</li>
-        </ul>
-    </section>
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h3>1. Is cryptocurrency legal?</h3>
-        <p>Cryptocurrency legality varies by country. Research your local regulations before investing.</p>
-        <h3>2. How do I keep my cryptocurrency safe?</h3>
-        <p>Use a hardware wallet and enable two-factor authentication to secure your assets.</p>
-        <h3>3. Can I lose money with cryptocurrency?</h3>
-        <p>Yes, the market is volatile. Never invest more than you can afford to lose.</p>
-    </section>
+
     <footer>
-        <p>&copy; 2024 CryptoTutorials.com. All rights reserved.</p>
+        &copy; 2024 AO NFT Marketplace. All rights reserved.
     </footer>
 </body>
 </html>
