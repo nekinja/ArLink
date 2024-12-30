@@ -13,49 +13,6 @@ Output Directory: dist  # or build
     <style>
         <img src="https://github.com/nekinja/ArLink/blob/main/c1.jpg?raw=true" alt="currency" />
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-        }
-        header {
-            background: #0077cc;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            background: #f4f4f4;
-            padding: 1em;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 1em;
-            text-decoration: none;
-            color: #0077cc;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 2em;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            margin-top: 2em;
-        }
-        .highlight {
-            background: #e7f3fe;
-            padding: 1em;
-            border-left: 5px solid #0077cc;
-            margin: 1em 0;
-        }
-    </style>
 </head>
 <body>
     <header>
