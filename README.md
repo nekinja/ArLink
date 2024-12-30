@@ -4,111 +4,81 @@ Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
 Output Directory: dist  # or build
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Analyst Dashboard</title>
+    <meta name="description" content="Panduan Dasar Cryptocurrency untuk Pemula">
+    <title>Panduan Cryptocurrency untuk Pemula</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #f9f9f9;
+            color: #333;
         }
-
         header {
-            background-color: #1e88e5;
-            padding: 1rem;
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem 0;
             text-align: center;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        main {
-            padding: 2rem;
-        }
-
-        .crypto-card {
-            background-color: #1f1f1f;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .crypto-card h2 {
-            margin: 0 0 0.5rem;
-        }
-
-        .crypto-card .price {
-            font-size: 1.5rem;
+        h1, h2 {
             color: #4caf50;
         }
-
-        .crypto-card .change {
-            font-size: 1.2rem;
+        ul {
+            padding-left: 20px;
         }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #1e88e5;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Crypto Analyst Dashboard</h1>
+        <h1>Panduan Cryptocurrency untuk Pemula</h1>
     </header>
+    <div class="container">
+        <h2>Apa itu Cryptocurrency?</h2>
+        <p>Cryptocurrency adalah mata uang digital yang menggunakan teknologi blockchain untuk keamanan. Tidak seperti mata uang tradisional, cryptocurrency tidak diatur oleh bank sentral atau pemerintah.</p>
 
-    <main>
-        <div id="crypto-container">
-            <div class="crypto-card">
-                <h2>Bitcoin (BTC)</h2>
-                <p class="price" id="btc-price">$0.00</p>
-                <p class="change" id="btc-change">Change: 0%</p>
-            </div>
+        <h2>Keuntungan Cryptocurrency</h2>
+        <ul>
+            <li>Transaksi Cepat dan Global</li>
+            <li>Transparansi dan Keamanan</li>
+            <li>Potensi Investasi</li>
+        </ul>
 
-            <div class="crypto-card">
-                <h2>Ethereum (ETH)</h2>
-                <p class="price" id="eth-price">$0.00</p>
-                <p class="change" id="eth-change">Change: 0%</p>
-            </div>
-        </div>
-    </main>
+        <h2>Risiko Cryptocurrency</h2>
+        <ul>
+            <li>Volatilitas Harga</li>
+            <li>Potensi Penipuan</li>
+            <li>Kehilangan Akses ke Dompet Digital</li>
+        </ul>
 
-    <footer>
-        <p>Crypto Analyst &copy; 2024</p>
-    </footer>
+        <h2>Bagaimana Memulai?</h2>
+        <ol>
+            <li><strong>Pelajari Dasar-dasarnya:</strong> Pahami cara kerja blockchain dan jenis cryptocurrency seperti Bitcoin dan Ethereum.</li>
+            <li><strong>Buat Dompet Digital:</strong> Pilih dompet yang aman untuk menyimpan cryptocurrency Anda.</li>
+            <li><strong>Beli Cryptocurrency:</strong> Gunakan platform exchange terpercaya untuk membeli cryptocurrency.</li>
+        </ol>
 
-    <script>
-        async function fetchCryptoData() {
-            const apiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true";
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-
-                document.getElementById('btc-price').textContent = `$${data.bitcoin.usd}`;
-                document.getElementById('btc-change').textContent = `Change: ${data.bitcoin.usd_24h_change.toFixed(2)}%`;
-
-                document.getElementById('eth-price').textContent = `$${data.ethereum.usd}`;
-                document.getElementById('eth-change').textContent = `Change: ${data.ethereum.usd_24h_change.toFixed(2)}%`;
-            } catch (error) {
-                console.error("Error fetching crypto data:", error);
-            }
-        }
-
-        // Fetch data on page load and refresh every 60 seconds
-        fetchCryptoData();
-        setInterval(fetchCryptoData, 60000);
-    </script>
+        <h2>Sumber Belajar Lainnya</h2>
+        <p>Untuk informasi lebih lanjut, kunjungi <a href="https://www.coindesk.com/" target="_blank">CoinDesk</a> atau <a href="https://cointelegraph.com/" target="_blank">CoinTelegraph</a>.</p>
+    </div>
 </body>
 </html>
