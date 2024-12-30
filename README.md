@@ -3,7 +3,6 @@ Branch: main
 Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
 Output Directory: dist  # or build
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@ Output Directory: dist  # or build
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Tutorial for Beginners</title>
     <style>
-        <img src="https://github.com/nekinja/ArLink/blob/main/c1.jpg?raw=true" alt="currency" />
+    <img src="https://github.com/nekinja/ArLink/blob/main/c1.jpg?raw=true" alt="currency" />
 
 </head>
 <body>
