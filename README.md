@@ -6,6 +6,8 @@ Output Directory: dist  # or build
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <img src="https://github.com/nekinja/ArLink/blob/main/c1.jpg?raw=true" alt="crypto" width="300">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Panduan Dasar Cryptocurrency untuk Pemula">
