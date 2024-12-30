@@ -6,6 +6,7 @@ Install Command: npm ci  # or yarn install
 Build Command: npm run build  # or yarn build
 Output Directory: dist  # or build
 <!DOCTYPE html>
+<img src="https://github.com/nekinja/ArLink/commit/0831d23c911bd647c3fef20dcf99acbe9be0a544" alt="v vana" />
 <html lang="en">
 <head>
     <meta charset="UTF-8">
