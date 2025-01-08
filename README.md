@@ -15,16 +15,16 @@
         header {
             background: #0077cc;
             color: white;
-            padding: 1em 0;
+            padding: 1 em 0;
             text-align: center;
         }
         nav {
             background: #f4f4f4;
-            padding: 1em;
+            padding: 1 em;
             text-align: center;
         }
         nav a {
-            margin: 0 1em;
+            margin: 0 1 em;
             text-decoration: none;
             color: #0077cc;
         }
@@ -32,20 +32,20 @@
             text-decoration: underline;
         }
         section {
-            padding: 2em;
+            padding: 2 em;
         }
         footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 1em 0;
-            margin-top: 2em;
+            padding: 1 em 0;
+            margin-top: 2 em;
         }
         .highlight {
             background: #e7f3fe;
-            padding: 1em;
-            border-left: 5px solid #0077cc;
-            margin: 1em 0;
+            padding: 1 em;
+            border-left: 5 px solid #0077cc;
+            margin: 1 em 0;
         }
     </style>
 </head>
